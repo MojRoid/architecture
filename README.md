@@ -1,4 +1,4 @@
-# Sample application modular architecture
+# Sample application architecture
 
 - This project is MVVM/MVI based with a unidirectional flow. A single data class stored in the
 ViewModel is used to represent a view state. The ViewModel accepts actions to be performed
