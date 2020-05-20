@@ -1,11 +1,11 @@
-# Sample application architecture
+# Sample application modular architecture
 
 This project is MVVM/MVI based with a unidirectional flow. A single data class stored in the
 ViewModel is used to represent a view state. The ViewModel accepts actions to be performed
 which are then 'transformed' to execute use-cases. The result from the use-cases are then 'reduced'
 by updating the current state with the new state which is observed by the view.
 
-The app uses Kotlin, Dagger, Architecture components and Coroutines.
+The architecture leans on modularization where it makes sense using Kotlin, Dagger, Architecture components and Coroutines.
 
 # Module architecture
 
@@ -13,7 +13,7 @@ The app uses Kotlin, Dagger, Architecture components and Coroutines.
 
 **feature-*** - These are complete features or 'verticals' that may rely on several libraries.
 
-**base** - This contains base classes that may be used across libraries, features or tasks.
+**base** - This contains base classes that may be used across libraries or features.
 
 **app** - Contains the application class and defines the apps entry point and dependency graph.
 
