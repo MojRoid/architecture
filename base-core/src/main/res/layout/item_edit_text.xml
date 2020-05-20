@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurface"
+    android:paddingStart="@dimen/space_large"
+    android:paddingEnd="@dimen/space_large">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/item_edit_text_input_layout"
+        style="@style/Text.Edit.Outlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:hintAnimationEnabled="false"
+        tools:counterMaxLength="123"
+        tools:hint="Hint text">
+
+        <com.example.base.core.view.custom.KeyboardEditText
+            android:id="@+id/item_edit_text"
+            style="@style/Text.Edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:maxLength="123" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</FrameLayout>

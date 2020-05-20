@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="?attr/colorSurface" />
+
+    <item
+        android:width="@dimen/icon_xlarge"
+        android:height="@dimen/icon_xlarge"
+        android:drawable="@drawable/ic_example_check_circled"
+        android:gravity="center" />
+
+</layer-list>

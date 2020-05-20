@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurface"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:paddingStart="0dp"
+    android:paddingTop="@dimen/space_large"
+    android:paddingEnd="@dimen/space_large"
+    android:paddingBottom="@dimen/space_large">
+
+    <ImageView
+        android:id="@+id/item_row_icon"
+        android:layout_width="@dimen/icon_medium"
+        android:layout_height="@dimen/icon_medium"
+        android:importantForAccessibility="no"
+        android:padding="@dimen/space_regular"
+        android:tint="?attr/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/item_row_icon_barrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@android:drawable/btn_star" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/item_row_icon_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="item_row_icon" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_row_title"
+        style="@style/Text.Headline6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_large"
+        android:paddingEnd="@dimen/space_large"
+        app:layout_constraintBottom_toTopOf="@id/item_row_description"
+        app:layout_constraintEnd_toStartOf="@id/item_row_button_barrier"
+        app:layout_constraintStart_toStartOf="@id/item_row_icon_barrier"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_row_description"
+        style="@style/Text.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_large"
+        android:paddingEnd="@dimen/space_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_row_button_barrier"
+        app:layout_constraintStart_toStartOf="@id/item_row_icon_barrier"
+        app:layout_constraintTop_toBottomOf="@id/item_row_title"
+        tools:text="Description" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/item_row_button_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="item_row_button" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/item_row_button"
+        style="@style/Button.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

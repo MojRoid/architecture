@@ -1,0 +1,44 @@
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// COMMON ANDROID CONFIG SETTINGS                                                                 //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+android {
+    compileSdkVersion versions.targetSdk
+    ndkVersion "$versions.ndk"
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8
+
+    configurations.all { resolutionStrategy.force libs.findbugs }
+
+    buildTypes { debug {}; release {} }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// DEPENDENCIES                                                                                   //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+dependencies { androidDependencies() }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// COMMON FLAGS                                                                                   //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+androidExtensions { experimental = true }

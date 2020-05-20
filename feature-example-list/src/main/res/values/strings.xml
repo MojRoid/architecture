@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="example_list_toolbar_title">Todo\'s</string>
+
+    <string name="example_list_empty_title">No todo\'s</string>
+    <string name="example_list_empty_subtitle">Create your first todo</string>
+    <string name="example_list_empty_button">Create</string>
+
+    <string name="example_list_error_title">Error fetching todo\'s</string>
+    <string name="example_list_error_subtitle">Check your internet connection and try again</string>
+
+</resources>

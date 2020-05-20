@@ -1,0 +1,4 @@
+apply plugin: 'com.android.library'
+apply from: "$rootProject.rootDir/config-android.gradle"
+apply from: "$rootProject.rootDir/config-android-environment.gradle"
+apply from: "$rootProject.rootDir/config-version.gradle"

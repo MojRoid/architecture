@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Default material colours -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorOnPrimary">@color/color_surface</item>
+
+        <item name="colorPrimaryVariant">?attr/colorPrimary</item>
+        <item name="colorPrimaryDark">?attr/colorPrimary</item>
+
+        <item name="colorSecondary">?attr/colorPrimary</item>
+        <item name="colorSecondaryVariant">?attr/colorPrimary</item>
+        <item name="colorOnSecondary">?attr/colorOnPrimary</item>
+
+        <item name="colorError">@color/red</item>
+        <item name="colorOnError">@color/color_surface</item>
+
+        <item name="colorWarning">@color/orange</item>
+        <item name="colorWarningDark">@color/orange_dark</item>
+        <item name="colorOnWarning">?attr/colorOnSurface</item>
+
+        <item name="colorPositive">@color/green</item>
+        <item name="colorOnPositive">?attr/colorSurface</item>
+
+        <item name="colorNegative">?attr/colorError</item>
+        <item name="colorOnNegative">?attr/colorOnError</item>
+
+        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorOnSurface">@color/color_on_surface</item>
+
+        <item name="colorBackground">@color/color_background</item>
+        <item name="android:colorBackground">?attr/colorSurface</item>
+        <item name="colorOnBackground">?attr/colorOnSurface</item>
+
+        <item name="colorControlHighlight">@color/aquamarine_12</item>
+
+        <!-- Default text style -->
+        <item name="android:textColorPrimary">?attr/colorOnSurface</item>
+        <item name="android:textColorSecondary">?attr/colorOnSurface</item>
+
+        <!-- Custom colours -->
+        <item name="colorHeader">@color/color_header</item>
+        <item name="colorOnHeader">@color/color_on_header</item>
+        <item name="colorOnHeaderSubtitle">@color/color_on_header_subtitle</item>
+
+
+        <item name="colorSurface38">@color/color_surface_38</item>
+        <item name="colorSurface70">@color/color_surface_70</item>
+        <item name="colorOnSurface12">@color/color_on_surface_12</item>
+        <item name="colorOnSurface38">@color/color_on_surface_38</item>
+        <item name="colorOnSurface70">@color/color_on_surface_70</item>
+
+        <!-- Status and nav bar -->
+        <item name="android:windowLightStatusBar">@bool/is_light_theme</item>
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+
+        <!-- Button styles -->
+        <item name="buttonStylePrimary">@style/Button.Primary</item>
+        <item name="buttonStyleSecondary">@style/Button.Secondary</item>
+        <item name="buttonStyleTertiary">@style/Button.Tertiary</item>
+
+        <!-- Components -->
+        <item name="materialAlertDialogTheme">@style/Component.AlertDialog</item>
+
+    </style>
+
+    <style name="AppTheme.Default" />
+
+    <style name="AppTheme.Default.Splash">
+        <item name="android:background">@drawable/example_splash_background</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+</resources>

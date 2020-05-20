@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurface"
+    android:paddingStart="@dimen/space_large"
+    android:paddingTop="@dimen/space_regular"
+    android:paddingEnd="@dimen/space_large"
+    android:paddingBottom="@dimen/space_regular">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/item_button"
+        style="@style/Button.Tertiary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Button" />
+
+</FrameLayout>

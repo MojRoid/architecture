@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_on_surface">#FFFFFF</color>
+    <color name="color_on_surface_12">#1FFFFFFF</color>
+    <color name="color_on_surface_38">#61FFFFFF</color>
+    <color name="color_on_surface_70">#B3FFFFFF</color>
+
+    <color name="color_header">#000000</color>
+    <color name="color_on_header">@color/color_on_surface</color>
+    <color name="color_on_header_subtitle">@color/color_on_surface_70</color>
+
+    <color name="color_surface">#2E2E2E</color>
+    <color name="color_surface_38">#622E2E2E</color>
+    <color name="color_surface_70">#B32E2E2E</color>
+
+    <color name="color_background">#181818</color>
+
+    <color name="color_primary">@color/heliotrope</color>
+    <color name="color_primary_12">@color/heliotrope_12</color>
+    <color name="color_secondary">@color/black_pearl</color>
+    <color name="color_secondary_12">@color/black_pearl_12</color>
+
+</resources>

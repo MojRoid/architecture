@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="buttonStylePrimary" format="reference" />
+    <attr name="buttonStyleSecondary" format="reference" />
+    <attr name="buttonStyleTertiary" format="reference" />
+
+    <attr name="colorBackground" format="reference" />
+
+    <attr name="colorHeader" format="reference" />
+    <attr name="colorOnHeader" format="reference" />
+    <attr name="colorOnHeaderSubtitle" format="reference" />
+
+    <attr name="colorSurface38" format="reference" />
+    <attr name="colorSurface70" format="reference" />
+    <attr name="colorOnSurface12" format="reference" />
+    <attr name="colorOnSurface38" format="reference" />
+    <attr name="colorOnSurface70" format="reference" />
+
+    <attr name="colorWarning" format="reference" />
+    <attr name="colorWarningDark" format="reference" />
+    <attr name="colorOnWarning" format="reference" />
+
+    <attr name="colorPositive" format="reference" />
+    <attr name="colorOnPositive" format="reference" />
+
+    <attr name="colorNegative" format="reference" />
+    <attr name="colorOnNegative" format="reference" />
+
+    <!-- https://issuetracker.google.com/issues/136103084 -->
+    <attr name="flow_horizontalSeparator" />
+    <attr name="flow_verticalSeparator" />
+    <attr name="motionProgress" />
+    <attr name="waveDecay" />
+    <attr name="motionPathRotate" />
+    <attr name="duration" />
+
+</resources>

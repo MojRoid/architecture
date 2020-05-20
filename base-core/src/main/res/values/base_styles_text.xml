@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Text.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/font_family_circular_std_regular</item>
+    </style>
+
+    <style name="Text.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/font_family_circular_std_regular</item>
+    </style>
+
+    <style name="Text.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/font_family_circular_std_regular</item>
+    </style>
+
+    <style name="Text.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/font_family_circular_std_regular</item>
+    </style>
+
+    <style name="Text.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/font_family_circular_std_regular</item>
+    </style>
+
+    <style name="Text.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/font_family_circular_std_medium</item>
+    </style>
+
+    <style name="Text.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/font_family_circular_std_regular</item>
+    </style>
+
+    <style name="Text.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/font_family_circular_std_medium</item>
+    </style>
+
+    <style name="Text.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/font_family_circular_std_regular</item>
+    </style>
+
+    <style name="Text.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/font_family_circular_std_regular</item>
+        <item name="android:textColor">?attr/colorOnSurface70</item>
+    </style>
+
+    <style name="Text.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/font_family_circular_std_medium</item>
+    </style>
+
+    <style name="Text.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/font_family_circular_std_regular</item>
+        <item name="android:textColor">?attr/colorOnSurface70</item>
+    </style>
+
+    <style name="Text.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/font_family_circular_std_bold</item>
+    </style>
+
+    <style name="Text.Edit" parent="Text.Body2">
+        <item name="android:inputType">text|textCapSentences</item>
+        <item name="helperTextTextAppearance">@style/Text.Caption</item>
+    </style>
+
+    <style name="Text.Edit.Currency" parent="Text.Body2">
+        <item name="android:inputType">number|numberDecimal</item>
+    </style>
+
+    <style name="Text.Edit.Outlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="prefixTextAppearance">@style/Text.Body2</item>
+    </style>
+
+    <style name="Text.Edit.ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="helperTextTextAppearance">@style/Text.Caption</item>
+    </style>
+
+</resources>

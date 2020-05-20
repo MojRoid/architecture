@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Example.Debug</string>
+    <string name="tester_task_name">Example.Tester</string>
+
+</resources>

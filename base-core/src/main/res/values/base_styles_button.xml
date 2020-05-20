@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Button.Primary" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textAppearance">@style/Text.Button</item>
+        <item name="android:layout_height">@dimen/button_regular</item>
+        <item name="cornerRadius">@dimen/radius_large</item>
+    </style>
+
+    <style name="Button.Primary.Large">
+        <item name="android:layout_height">@dimen/button_xlarge</item>
+        <item name="cornerRadius">@dimen/radius_regular</item>
+    </style>
+
+    <style name="Button.Primary.Destructive">
+        <item name="android:backgroundTint">?attr/colorNegative</item>
+    </style>
+
+    <style name="Button.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAppearance">@style/Text.Button</item>
+        <item name="android:layout_height">@dimen/button_regular</item>
+        <item name="cornerRadius">@dimen/radius_large</item>
+    </style>
+
+    <style name="Button.Secondary.Large">
+        <item name="android:layout_height">@dimen/button_xlarge</item>
+        <item name="cornerRadius">@dimen/radius_regular</item>
+    </style>
+
+    <style name="Button.Secondary.Destructive">
+        <item name="iconTint">?attr/colorNegative</item>
+        <item name="rippleColor">@color/color_button_ripple_destructive</item>
+        <item name="android:textColor">@color/color_button_text_secondary_destructive</item>
+    </style>
+
+    <style name="Button.Tertiary" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAppearance">@style/Text.Button</item>
+        <item name="android:layout_height">@dimen/button_regular</item>
+        <item name="cornerRadius">@dimen/radius_large</item>
+    </style>
+
+    <style name="Button.Tertiary.Large">
+        <item name="android:layout_height">@dimen/button_xlarge</item>
+        <item name="cornerRadius">@dimen/radius_regular</item>
+    </style>
+
+    <style name="Button.Tertiary.Destructive">
+        <item name="iconTint">?attr/colorNegative</item>
+        <item name="rippleColor">@color/color_button_ripple_destructive</item>
+        <item name="android:textColor">@color/color_button_text_secondary_destructive</item>
+    </style>
+
+    <style name="Button.Primary.Icon">
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">0dp</item>
+    </style>
+
+    <style name="Button.Primary.Icon.Destructive">
+        <item name="iconTint">?attr/colorNegative</item>
+        <item name="rippleColor">@color/color_button_ripple_destructive</item>
+    </style>
+
+    <style name="Button.Secondary.Icon">
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">0dp</item>
+    </style>
+
+    <style name="Button.Secondary.Icon.Destructive">
+        <item name="iconTint">?attr/colorNegative</item>
+        <item name="rippleColor">@color/color_button_ripple_destructive</item>
+    </style>
+
+    <style name="Button.Tertiary.Icon">
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">0dp</item>
+    </style>
+
+    <style name="Button.Tertiary.Icon.Dark">
+        <item name="iconTint">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="Button.Tertiary.Icon.Destructive">
+        <item name="iconTint">?attr/colorNegative</item>
+        <item name="rippleColor">@color/color_button_ripple_destructive</item>
+    </style>
+
+</resources>

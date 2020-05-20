@@ -1,0 +1,38 @@
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://kotlin.bintray.com/kotlinx' }
+    }
+
+    dependencies {
+        apply from: 'dependencies-versions.gradle'
+        apply from: 'dependencies-libraries.gradle'
+        apply from: 'dependencies-modules.gradle'
+
+        classpath libs.build.gradle
+        classpath libs.build.kotlin
+        classpath libs.build.navigation
+//        classpath libs.build.firebase
+//        classpath libs.build.crashlytics
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://kotlin.bintray.com/kotlinx' }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.sumup.com/releases' }
+    }
+
+    dependencies { apply from: "$rootProject.rootDir/dependencies-groups.gradle" }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

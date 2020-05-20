@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Colors named using http://chir.ag/projects/name-that-color/ -->
+    <!-- Contrast checker https://webaim.org/resources/contrastchecker/ -->
+    <!-- Hex colors transparency https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4 -->
+
+    <color name="color_on_surface">#212121</color>
+    <color name="color_on_surface_12">#1F212121</color>
+    <color name="color_on_surface_38">#61212121</color>
+    <color name="color_on_surface_70">#B3212121</color>
+
+    <color name="color_header">@color/color_on_surface</color>
+    <color name="color_on_header">@color/color_surface</color>
+    <color name="color_on_header_subtitle">@color/color_surface_70</color>
+
+    <color name="color_surface">#FFFFFF</color>
+    <color name="color_surface_38">#61FFFFFF</color>
+    <color name="color_surface_70">#B3FFFFFF</color>
+
+    <color name="color_background">#F5F5F5</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="color_primary">@color/aquamarine</color>
+    <color name="color_primary_12">@color/aquamarine_12</color>
+    <color name="color_secondary">@color/heliotrope</color>
+    <color name="color_secondary_12">@color/heliotrope_12</color>
+
+    <color name="aquamarine">#6CF6FE</color>
+    <color name="aquamarine_12">#1F6CF6FE</color>
+    <color name="heliotrope">#8AB4F8</color>
+    <color name="heliotrope_12">#1FEF43F0</color>
+    <color name="black_pearl">#091438</color>
+    <color name="black_pearl_12">#1F091438</color>
+    <color name="red">#FF4000</color>
+    <color name="orange">#FBBC04</color>
+    <color name="orange_dark">#EA7406</color>
+    <color name="green">#34A853</color>
+
+</resources>

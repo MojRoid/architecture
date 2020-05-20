@@ -1,0 +1,74 @@
+import groovy.json.JsonParserType
+import groovy.json.JsonSlurper
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// ENVIRONMENT CONFIGURATION
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Set's the current environment. Can be set via the following command-line arguments:
+ * -Penv=local
+ * -Penv=test
+ * -Penv=production
+ *
+ * @param defaultEnvironment The default environment to set as current if no command-line
+ * argument has been supplied.
+ * @return the currently loaded environment name.
+ */
+String loadCurrentEnvironmentOrDefault(String defaultEnvironment) {
+    String argument = hasProperty('env') ? env : defaultEnvironment
+    String capitalized = argument.toLowerCase().capitalize()
+    println("Current Environment: " + capitalized)
+    return capitalized
+}
+
+/**
+ * Loads all environment properties.
+ *
+ * @return the loaded environments.
+ */
+Object loadEnvironments() {
+    File file = file("${rootDir.absolutePath}/config-android-environment-values.json")
+    return new JsonSlurper().setType(JsonParserType.INDEX_OVERLAY).parse(file)
+}
+
+android {
+    defaultConfig {
+
+        // Set current environment
+        String currentEnvironment = loadCurrentEnvironmentOrDefault('production')
+        buildConfigField(
+                "com.example.base.core.global.Environment.Values",
+                "ENVIRONMENT",
+                "com.example.base.core.global.Environment.${currentEnvironment}.INSTANCE"
+        )
+
+        // Load all environment variables
+        loadEnvironments().each { environment ->
+            environment.value.each { group ->
+                group.value.each { pair ->
+
+                    String type
+                    if (pair.value instanceof String) {
+                        type = "String"
+                    } else if (pair.value instanceof BigDecimal) {
+                        type = "double"
+                    } else if (pair.value instanceof Integer) {
+                        type = "int"
+                    } else if (pair.value instanceof Boolean) {
+                        type = "boolean"
+                    } else throw new GradleException("Unknown type: ${pair.value}")
+
+                    String value
+                    if (pair.value instanceof String) value = "\"${pair.value}\"" else value = "${pair.value}"
+
+                    buildConfigField(
+                            type,
+                            "${environment.key}_${group.key}_${pair.key}".toUpperCase(),
+                            value
+                    )
+                }
+            }
+        }
+    }
+}

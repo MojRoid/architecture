@@ -1,0 +1,13 @@
+include ':app'
+
+// Base
+include ':base-core'
+include ':base-test'
+
+// Features
+include ':feature-tester'
+include ':feature-main'
+include ':feature-example-list'
+
+// Libraries
+include ':lib-todos'

@@ -1,0 +1,17 @@
+ext.mods = [
+
+        base   : [
+                core: project(':base-core'),
+                test: project(':base-test'),
+        ],
+        feature: [
+                tester : project(':feature-tester'),
+                main   : project(':feature-main'),
+                example: [
+                        list: project(':feature-example-list')
+                ],
+        ],
+        library: [
+                todos: project(':lib-todos'),
+        ],
+]

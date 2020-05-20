@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="space_xxsmall">1dp</dimen>
+    <dimen name="space_xsmall">2dp</dimen>
+    <dimen name="space_small">4dp</dimen>
+    <dimen name="space_regular">8dp</dimen>
+    <dimen name="space_medium">12dp</dimen>
+    <dimen name="space_large">16dp</dimen>
+    <dimen name="space_xlarge">24dp</dimen>
+    <dimen name="space_xxlarge">32dp</dimen>
+    <dimen name="space_xxxlarge">64dp</dimen>
+    <dimen name="space_xxxxlarge">72dp</dimen>
+
+    <dimen name="icon_xsmall">16dp</dimen>
+    <dimen name="icon_small">24dp</dimen>
+    <dimen name="icon_medium">36dp</dimen>
+    <dimen name="icon_large">48dp</dimen>
+    <dimen name="icon_xlarge">64dp</dimen>
+    <dimen name="icon_xxlarge">100dp</dimen>
+
+    <dimen name="button_xsmall">36dp</dimen>
+    <dimen name="button_small">48dp</dimen>
+    <dimen name="button_regular">56dp</dimen>
+    <dimen name="button_large">72dp</dimen>
+    <dimen name="button_xlarge">90dp</dimen>
+
+    <dimen name="radius_small">4dp</dimen>
+    <dimen name="radius_regular">8dp</dimen>
+    <dimen name="radius_large">24dp</dimen>
+    <dimen name="stroke">0.5dp</dimen>
+    <dimen name="elevation">3dp</dimen>
+    <dimen name="elevation_lift">1dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+
+</resources>

@@ -1,0 +1,13 @@
+apply plugin: 'com.android.library'
+apply from: "$rootProject.rootDir/config-android.gradle"
+
+android.lintOptions.disable 'InvalidPackage'
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// DEPENDENCIES                                                                                   //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+dependencies {
+    implementation mods.base.core
+    baseTestDependencies()
+}

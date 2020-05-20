@@ -1,0 +1,45 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// VERSIONING - automatically infers version name and code based on the latest git tag            //
+//              following the naming schema "v{major}.{minor}.{patch}"                            //
+//                                                                                                //
+// - Major version should NOT exceed 209.                                                         //
+// - Minor and Patch version should NOT exceed 99.                                                //
+// - Maximum version code Google allow is 2100000000. This is equivalent to release-v210.0.0.     //
+// - Build number should NOT exceed 999.                                                          //
+//                                                                                                //
+// Assuming your tag is:                                                                          //
+//  - v1.2.3 the code will be 10203000                                                            //
+//  - v11.22.33 the code will be 112233000                                                        //
+//  - v1.20.30 the code will be 12030000                                                          //
+//  - v1.99.99 the code will be 19999000                                                          //
+//  - v2.0.0 the code will be 20000000                                                            //
+//  - v209.99.99 the code will be 2099999000                                                      //
+//  - v0.0.1 the code will be 1000                                                                //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+def name = "0.0.1" // Default
+
+if (System.getenv("GITHUB_ACTIONS") == "true") {
+    // Remove if you'd like to run for local builds too.
+    def schema = "v"
+    def tag = ['sh', '-c', "git tag -l --sort version:refname \"${schema}*\" | tail -n 1"].execute().text.trim()
+    if (tag != null && !tag.startsWith(schema)) {
+        throw new GradleException("Tag \'${tag}\' does not follow schema of \'${schema}x.x.x\'")
+    }
+    if (tag != null) name = tag.replace(schema, "")
+}
+
+def major = (name.substring(0, name.indexOf("."))).toInteger()
+def minor = (name.substring(name.indexOf(".") + 1, name.lastIndexOf("."))).toInteger()
+def patch = (name.substring(name.lastIndexOf(".") + 1, name.length())).toInteger()
+def build = System.getenv("BUILD_NUMBER") // Obtain build number from a CI environment variable.
+if (build == null) build = 0 else build = build.toInteger() % 1000 // Get last 3 digits of the build number.
+
+if (major > 209) throw new GradleException("Major version ${major} exceeds limit")
+if (minor > 99) throw new GradleException("Minor version ${minor} exceeds limit")
+if (patch > 99) throw new GradleException("Patch version ${patch} exceeds limit")
+
+def code = (major * 10000000) + (minor * 100000) + (patch * 1000) + build
+
+android { defaultConfig { versionCode code; versionName "$name($build)" } }

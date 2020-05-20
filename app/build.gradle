@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.firebase.crashlytics'
+apply from: "$rootProject.rootDir/config-android.gradle"
+apply from: "$rootProject.rootDir/config-version.gradle"
+apply from: "$rootProject.rootDir/config-build.gradle"
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// ANDROID                                                                                        //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+android {
+    defaultConfig {
+        applicationId "com.example"
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+//            firebaseCrashlytics.mappingFileUploadEnabled false
+        }
+        release {
+            if (System.getenv("GITHUB_ACTIONS") == null) signingConfig signingConfigs.debug
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    bundle {
+        language { enableSplit = true }
+        density { enableSplit = true }
+        abi { enableSplit = true }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// DEPENDENCIES                                                                                   //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+dependencies {
+    // Adds all modules in 'dependencies-modules.gradle' as dependencies recursively
+    mods.each { entry -> addDependencies(entry) }
+}
+
+def addDependencies(entry) {
+    if (entry.value instanceof LinkedHashMap) {
+        entry.value.each { value -> addDependencies(value) }
+    } else {
+        dependencies {
+            if (entry.key == "tester") {
+                debugImplementation entry.value
+            } else {
+                implementation entry.value
+            }
+        }
+    }
+}

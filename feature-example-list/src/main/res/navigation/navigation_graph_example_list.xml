@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph_example_list"
+    app:startDestination="@id/ExampleListFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/ExampleListFragment"
+        android:name="com.example.feature.sample.screen.view.ExampleListFragment"
+        tools:layout="@layout/fragment_example_list">
+
+    </fragment>
+
+</navigation>

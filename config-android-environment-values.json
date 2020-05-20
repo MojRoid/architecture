@@ -1,0 +1,18 @@
+{
+  "test": {
+    "endpoint": {
+      "example": "https://jsonplaceholder.typicode.com/"
+    },
+    "key": {
+      "example": "abc123"
+    }
+  },
+  "production": {
+    "endpoint": {
+      "example": "https://jsonplaceholder.typicode.com/"
+    },
+    "key": {
+      "example": "def456"
+    }
+  }
+}

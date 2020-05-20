@@ -1,0 +1,13 @@
+apply plugin: 'com.android.library'
+apply from: "$rootProject.rootDir/config-android.gradle"
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// DEPENDENCIES                                                                                   //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+dependencies {
+    implementation mods.base.core
+    testImplementation mods.base.test
+
+    implementation mods.library.todos
+}
