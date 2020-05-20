@@ -34,33 +34,33 @@ jobs:
       run: chmod +x ./gradlew
       
    # - name: Unit tests
-   #  run: ./gradlew testDebugUnitTest
+    run: ./gradlew testDebugUnitTest
     
     - name: Build release
       run: ./gradlew :app:bundleRelease
     
-    - name: Sign release
-      uses: r0adkll/sign-android-release@v1
-      with:
-        releaseDirectory: ./app/build/outputs/bundle/release
-        signingKeyBase64: ${{ secrets.KEYSTORE_SIGNING_KEY }}
-        alias: ${{ secrets.KEYSTORE_ALIAS }}
-        keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
-        keyPassword: ${{ secrets.KEY_PASSWORD }}
+    # - name: Sign release
+      # uses: r0adkll/sign-android-release@v1
+      # with:
+        # releaseDirectory: ./app/build/outputs/bundle/release
+        # signingKeyBase64: ${{ secrets.KEYSTORE_SIGNING_KEY }}
+        # alias: ${{ secrets.KEYSTORE_ALIAS }}
+        # keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
+        # keyPassword: ${{ secrets.KEY_PASSWORD }}
 
       #    - uses: actions/upload-artifact@v1
       #      with:
       #        name: Release build ${{ env.BUILD_NUMBER }}
       #        path: ${{ env.SIGNED_RELEASE_FILE }}
 
-    - name: Export Google Service account JSON
-      run: echo "${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}" | base64 --decode > google-service-account.json
+    # - name: Export Google Service account JSON
+      # run: echo "${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}" | base64 --decode > google-service-account.json
     
-    - name: Upload to Google Play - Internal
-      uses: r0adkll/upload-google-play@v1
-      with:
-        serviceAccountJson: google-service-account.json
-        packageName: com.example
-        releaseFile: ${{ env.SIGNED_RELEASE_FILE }}
-        track: internal
-        mappingFile: ./app/build/outputs/mapping/release/mapping.txt
+    # - name: Upload to Google Play - Internal
+      # uses: r0adkll/upload-google-play@v1
+      # with:
+        # serviceAccountJson: google-service-account.json
+        # packageName: com.example
+        # releaseFile: ${{ env.SIGNED_RELEASE_FILE }}
+        # track: internal
+        # mappingFile: ./app/build/outputs/mapping/release/mapping.txt
