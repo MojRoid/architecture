@@ -1,13 +1,16 @@
 # Sample application modular architecture
 
-This project is MVVM/MVI based with a unidirectional flow. A single data class stored in the
+- This project is MVVM/MVI based with a unidirectional flow. A single data class stored in the
 ViewModel is used to represent a view state. The ViewModel accepts actions to be performed
 which are then 'transformed' to execute use-cases. The result from the use-cases are then 'reduced'
 by updating the current state with the new state which is observed by the view.
 
-The app primarily uses Kotlin, Dagger, Architecture Components and Coroutines.
+- Groupie is used heavily to create re-useable, consistent, performant UI components that make
+creating both static and dynamic screens quick and easy.
 
-The architecture leans on modularization to keep code tightly scoped.
+- The app primarily uses Kotlin, Dagger, Architecture Components, Coroutines and Groupie.
+
+- The architecture leans on modularization where it makes sense to keep code tightly scoped.
 
 # Module architecture
 
@@ -36,7 +39,8 @@ consumers of the repository being affected. Caching strategies can also be defin
 
 **view** - Contains view logic, typically fragments/activities/services, etc.
 
-**viewslice** - Contains discrete pieces of view logic which can be consumed by views (mainly useful when you need to re-use view logic with lifecycle).
+**viewslice** - Contains discrete pieces of view logic which can be consumed by views (mainly useful
+when you need to re-use view logic with lifecycle).
 
 **extension** - Contains extension classes.
 
