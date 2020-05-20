@@ -1,2 +1,4 @@
-['sh', '-c', "git tag -l | xargs git tag -d | git fetch --tags"].execute()
-println("Cleaned build tags")
+if (System.getenv("GITHUB_ACTIONS") == null) {
+    ['sh', '-c', "git tag -l | xargs git tag -d | git fetch --tags"].execute()
+    println("Cleaned build tags")
+}
