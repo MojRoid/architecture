@@ -5,7 +5,9 @@ ViewModel is used to represent a view state. The ViewModel accepts actions to be
 which are then 'transformed' to execute use-cases. The result from the use-cases are then 'reduced'
 by updating the current state with the new state which is observed by the view.
 
-The architecture leans on modularization where it makes sense using Kotlin, Dagger, Architecture components and Coroutines.
+The app primarily uses Kotlin, Dagger, Architecture Components and Coroutines.
+
+The architecture leans on modularization to keep code tightly scoped.
 
 # Module architecture
 
