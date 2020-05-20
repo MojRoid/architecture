@@ -5,8 +5,8 @@ ViewModel is used to represent a view state. The ViewModel accepts actions to be
 which are then 'transformed' to execute use-cases. The result from the use-cases are then 'reduced'
 by updating the current state with the new state which is observed by the view.
 
-- Groupie is used heavily to create re-useable, consistent, performant UI components that make
-creating both static and dynamic screens quick and easy.
+- [Groupie](https://github.com/lisawray/groupie) is used heavily to create re-useable, consistent,
+performant UI components that make creating both static and dynamic screens quick and easy.
 
 - The app primarily uses Kotlin, Dagger, Architecture Components, Coroutines and Groupie.
 
