@@ -2,13 +2,8 @@ package com.example.base.core.viewslice
 
 import android.content.Context
 import android.content.res.Resources
-import android.graphics.PorterDuff
 import android.view.View
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.annotation.ColorRes
 import androidx.annotation.IdRes
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.*
 import com.example.base.core.view.base.BaseActivity
 import com.example.base.core.view.base.BaseFragment
@@ -67,20 +62,12 @@ abstract class BaseViewSlice<RESULT>(
 
     protected inline fun launch(
         crossinline onError: (Throwable) -> Unit = { it.printStackTrace() },
-        crossinline block: suspend () -> Unit
+        crossinline block: suspend CoroutineScope.() -> Unit
     ): Job = scope.launch(CoroutineExceptionHandler { _, throwable -> onError(throwable) }) {
         block()
     }
 
     protected fun <T : View> find(@IdRes id: Int): T = view.findViewById(id)
-
-    protected fun ImageView.tint(@ColorRes color: Int) {
-        setColorFilter(ContextCompat.getColor(context, color), PorterDuff.Mode.SRC_IN)
-    }
-
-    protected fun TextView.color(@ColorRes color: Int) {
-        setTextColor(ContextCompat.getColor(context, color))
-    }
 
     protected inline fun <reified T> observe(
         liveData: LiveData<T>,
